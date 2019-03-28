@@ -364,7 +364,7 @@
           
             <h2 id="学习目的"><a href="#学习目的" class="headerlink" title="学习目的"></a>学习目的</h2><pre><code>明白虚拟机中内存如何划分的，哪部分区域，什么样的代码和操作可能导致内存溢出异常。了解各个区域出现内存溢出异常的原因。
 </code></pre><h2 id="运行时数据区"><a href="#运行时数据区" class="headerlink" title="运行时数据区"></a>运行时数据区</h2><pre><code>Java虚拟机所管理的内存将会包括下面几个运行时数据区域。
-</code></pre><p><img src="./img1.png" alt="image-20190312024033766"></p>
+</code></pre><p><img src="/2019/03/28/深入理解jvm第二章/img1.png" alt="image-20190312024033766"></p>
 <h3 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h3><blockquote>
 <p>程序计数器是一块较小的内存空间，它的作用可以看作是当前线程所执行的字节码的行号指示器。在虚拟机的概念模型里字节码解释器工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异常处理、线程恢复等基础功能都需要依赖这个计数器来完成。</p>
 </blockquote>
@@ -411,12 +411,12 @@
 <h3 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h3><blockquote>
 <p>本地方法栈（Native Method Stacks）与虚拟机栈所发挥的作用是非常相似的，其区别不过是虚拟机栈为虚拟机执行Java方法（也就是字节码）服务，而本地方法栈则是为虚拟机使用到的Native方法服务。</p>
 </blockquote>
-<p><img src="./img2.png" alt="image-20190312040738895"></p>
+<p><img src="/2019/03/28/深入理解jvm第二章/img2.png" alt="image-20190312040738895"></p>
 <h3 id="Java堆"><a href="#Java堆" class="headerlink" title="Java堆"></a>Java堆</h3><ul>
 <li><p>堆内存</p>
 <ul>
 <li>Java 中的堆是 JVM 所管理的最大的一块内存空间，主要用于存放各种类的实例对象。<br>在 Java 中，堆被划分成两个不同的区域：新生代 ( Young )、老年代 ( Old )。新生代 ( Young ) 又被划分为三个区域：Eden、From Survivor、To Survivor。这样划分的目的是为了使 JVM 能够更好的管理堆内存中的对象，包括内存的分配以及回收。</li>
-<li>堆内存模型：<br><img src="./img3.png" alt="image-20190312043735200"></li>
+<li>堆内存模型：<br><img src="/2019/03/28/深入理解jvm第二章/img3.png" alt="image-20190312043735200"></li>
 </ul>
 </li>
 <li><p>GC 堆</p>
@@ -461,9 +461,9 @@
 </ul>
 </li>
 </ul>
-<p><img src="./img4.png" alt="image-20190313002853143"></p>
+<p><img src="/2019/03/28/深入理解jvm第二章/img4.png" alt="image-20190313002853143"></p>
 <ul>
-<li>对象的存放方式<br><img src="./img5.png" alt="image-20190313003357920"></li>
+<li>对象的存放方式<br><img src="/2019/03/28/深入理解jvm第二章/img5.png" alt="image-20190313003357920"></li>
 </ul>
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
 <li><p>在那些区域有可能发生OutOfMemory;有可能是哪些原因导致的？</p>

@@ -5,8 +5,8 @@
   
   <entry>
     <title>梯子搭建</title>
-    <link href="/2020/04/15/%E6%A2%AF%E5%AD%90%E6%90%AD%E5%BB%BA/"/>
-    <url>/2020/04/15/%E6%A2%AF%E5%AD%90%E6%90%AD%E5%BB%BA/</url>
+    <link href="/2020/04/15/note/%E6%A2%AF%E5%AD%90%E6%90%AD%E5%BB%BA/"/>
+    <url>/2020/04/15/note/%E6%A2%AF%E5%AD%90%E6%90%AD%E5%BB%BA/</url>
     
     <content type="html"><![CDATA[<ul><li><p>依次运行：</p><ul><li><code>wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.sh</code></li><li><code>chmod +x shadowsocksR.sh</code></li><li><code>./shadowsocksR.sh 2&gt;&amp;1 | tee shadowsocksR.log</code></li></ul></li></ul><p><strong>如提示 wget not found ， 请先执行 yum install -y wget</strong></p><ul><li>运行后，会提示你设置端口（port）和密码（password），端口设为 80</li><li>设置完端口和密码后直接回车，让代码自己运行，大概几分钟后运行结束，这时会出现红色字体的配置信息，请务必牢记，最好截图保存，以免遗忘</li><li>SSR 常用命令<pre><code>启动：/etc/init.d/shadowsocks start停止：/etc/init.d/shadowsocks stop重启：/etc/init.d/shadowsocks restart状态：/etc/init.d/shadowsocks status卸载（仅限秋水大大脚本）：./shadowsocksR.sh uninstall</code></pre></li><li><p>SSR 修改密码、配置多端口</p><ul><li>输入 vi /etc/shadowsocks.json</li><li>按“i”进入编辑模式，编辑如下</li></ul><pre><code class="json">  {  “server“: “0.0.0.0“,  “server_ipv6“: “::“,  “local_address“: “127.0.0.1“,  “local_port“: 1081,  “port_password“:{  “端口 1“:“密码 1“,  “端口 2“:“密码 2“,  “端口 3“:“密码 3“,  “端口 4“:“密码 4“  },  “timeout“: 120,  “udp_timeout“: 60,  “method“: “chacha20“,  “protocol“: “auth_sha1_compatible“,  “protocol_param“: ““,  “obfs“: “http_simple_compatible“,  “obfs_param“: ““,  “dns_ipv6“: false,  “connect_verbose_info“: 0,  “redirect“: ““,  “fast_open“: false,  “workers“: 1}</code></pre></li><li><p>按 esc 返回，输入:wq 回车保存</p></li><li>输入<code>/etc/init.d/shadowsocks restart</code> 重启 ssr</li><li>如不能联网，则关闭防火墙（逐条输入）<pre><code>service iptables restartservice iptables stopchkconfig iptables off</code></pre></li></ul>]]></content>
     
@@ -32,8 +32,8 @@
   
   <entry>
     <title>centos7命令</title>
-    <link href="/2020/04/15/centos7%E5%91%BD%E4%BB%A4/"/>
-    <url>/2020/04/15/centos7%E5%91%BD%E4%BB%A4/</url>
+    <link href="/2020/04/15/note/centos7%E5%91%BD%E4%BB%A4/"/>
+    <url>/2020/04/15/note/centos7%E5%91%BD%E4%BB%A4/</url>
     
     <content type="html"><![CDATA[<h3 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h3><ul><li>查看防火墙状态<ul><li>firewall-cmd –state</li></ul></li><li>开启防火墙<ul><li>systemctl start firewalld.service</li></ul></li><li>设置开机自启<ul><li>systemctl enable firewalld.service</li></ul></li><li>重启防火墙<ul><li>systemctl restart firewalld.service</li></ul></li><li>开启特定端口<ul><li>firewall-cmd –zone=public –add-port=80/tcp –permanent <ul><li>zone #作用域</li><li>–add-port=80/tcp  #添加端口，格式为：端口/通讯协议</li><li>–permanent   #永久生效，没有此参数重启后失效</li></ul></li></ul></li></ul>]]></content>
     
@@ -59,8 +59,8 @@
   
   <entry>
     <title>Linux记录</title>
-    <link href="/2020/04/15/Linux%E8%AE%B0%E5%BD%95/"/>
-    <url>/2020/04/15/Linux%E8%AE%B0%E5%BD%95/</url>
+    <link href="/2020/04/15/note/Linux%E8%AE%B0%E5%BD%95/"/>
+    <url>/2020/04/15/note/Linux%E8%AE%B0%E5%BD%95/</url>
     
     <content type="html"><![CDATA[<h3 id="manjaro-相关"><a href="#manjaro-相关" class="headerlink" title="manjaro 相关"></a>manjaro 相关</h3><ul><li>压缩包乱码：</li></ul><pre><code>sudo pacman -Sy unarchiverunar -e GBK 人员组织机构对应关系表.zip</code></pre><ul><li><p>在终端打开文件夹：<br><code>nautilus .</code></p></li><li><p>使用以下命令，生成可用中国镜像站列表：<br><code>sudo pacman-mirrors -i -c China -m rank</code></p></li><li><p>从远端接受文件:<br><code>scp root@www.runoob.com:/home/root/others/music /home/space/music/1.mp3</code></p></li><li><p>发送文件到远端:</p></li></ul><pre><code>scp local_file remote_username@remote_ip:remote_folder或者scp local_file remote_username@remote_ip:remote_file或者scp local_file remote_ip:remote_folder或者scp local_file remote_ip:remote_file</code></pre>]]></content>
     

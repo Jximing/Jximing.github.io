@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>java学习路线</title>
+    <link href="/2020/06/22/java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
+    <url>/2020/06/22/java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</url>
+    
+    <content type="html"><![CDATA[<ul><li>Java<ul><li>基础<ul><li>thinking in java(完成一半)</li><li>Java核心技术(已完成)</li></ul></li><li>并发<ul><li>JAVA并发编程实践(已完成)</li><li>Java并发编程的艺术</li></ul></li><li>JVM<ul><li>深入理解Java虚拟机_JVM高级特性与最佳实践（已完成）</li></ul></li><li>其他<ul><li>Effective Java</li><li>Java性能调优指南</li><li>重构_改善既有代码的设计</li></ul></li></ul></li><li>网络<ul><li>图解HTTP</li><li>图解TCP_IP</li><li>TCP IP详解</li><li>计算机网络</li></ul></li><li>操作系统<ul><li>操作系统导论</li><li>深入理解计算机系统</li><li>鸟哥的Linux私房菜</li></ul></li><li>数据结构与算法<ul><li>算法导论</li><li>算法</li></ul></li><li>数据库<ul><li>数据库系统概念</li><li>MySQL</li><li>Redis</li></ul></li><li>系统设计<ul><li><a href="#常用框架">常用框架</a><ul><li><a href="#springspringboot">Spring</a></li><li><a href="#springboot">SpringBoot</a></li><li><a href="#mybatis">MyBatis</a></li></ul></li><li><a href="#认证授权">认证授权(JWT、SSO)</a></li><li><a href="#分布式">分布式</a><ul><li><a href="#elasticsearch分布式搜索引擎">Elasticsearch(分布式搜索引擎)</a></li><li><a href="#rpc">RPC</a></li><li><a href="#消息队列">消息队列</a></li><li><a href="#api-网关">API 网关</a></li><li><a href="#分布式id">分布式id</a></li><li><a href="#分布式限流">分布式限流</a></li><li><a href="#分布式接口幂等性">分布式接口幂等性</a></li><li><a href="#数据库扩展">数据库扩展</a></li><li><a href="#zookeeper">ZooKeeper</a></li></ul></li><li><a href="#大型网站架构">大型网站架构</a><ul><li><a href="#性能测试">性能测试</a></li><li><a href="#高并发">高并发</a></li><li><a href="#高可用">高可用</a></li></ul></li><li><a href="#微服务">微服务</a><ul><li><a href="#spring-cloud">Spring Cloud</a></li></ul></li></ul></li><li>必会工具<ul><li>Git</li><li>Docker</li></ul></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>jvm</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java学习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>梯子搭建</title>
     <link href="/2020/04/15/note/%E6%A2%AF%E5%AD%90%E6%90%AD%E5%BB%BA/"/>
     <url>/2020/04/15/note/%E6%A2%AF%E5%AD%90%E6%90%AD%E5%BB%BA/</url>
